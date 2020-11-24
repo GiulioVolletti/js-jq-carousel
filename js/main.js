@@ -7,7 +7,7 @@ $(document).ready(
 
     next.click(
       function (){
-        console.log(next);
+        // console.log(next);
         goToRigth();
 
       }
@@ -15,11 +15,21 @@ $(document).ready(
 
     prev.click(
       function (){
-        console.log(prev);
+        // console.log(prev);
         goToLeft();
 
       }
     )
+
+    $(document).keydown(
+      function(){
+        if (event.which == 39) {
+          goToRigth();
+        } else if (event.which == 37) {
+          goToLeft();
+        }
+      console.log(event.which);
+    })
 
   }
 )
